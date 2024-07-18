@@ -16,9 +16,11 @@ const Coinlist = () => {
                     <div key={coin.id} className="coinbox">
                         <div className="rank">{coin.market_cap_rank}</div>
                         <div className="symbol">{coin.symbol}</div>
-                        <div className="pricechange">{coin.price_change_percentage_24h}</div>
+                        <div className={`pricechange ${getChangeClass(coin.price_change_percentage_24h)}`}>
+                            {coin.price_change_percentage_24h.toFixed(2)}%
+                        </div>
                         {/* <div className="coin">{coin.name}</div> */}
-                        <div className="price">€{`price ${getChangeClass(coin.price_change_percentage_24h)}`}</div>
+                        <div className="price">€{coin.current_price}</div>
                         <div className="marketcap">€{formatMarketCap(coin.market_cap)}</div>
                     </div>
                 ))

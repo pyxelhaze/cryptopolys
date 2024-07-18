@@ -20,27 +20,36 @@ h2 {
 .coinbox {
   display: flex;
   flex-direction: row;
-
   align-items: center;
-  width: 100%;
+  max-width: 100%;
   height: 40px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.473);
 }
 .coinbox > div {
-  padding-right: 7%;
-  margin-bottom: 3%;
+  /*  padding-right: 7%; */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+.price,
+.marketcap {
+  width: 30%;
+}
+.pricechange {
+  width: 20%;
+}
+.rank,
+.symbol {
+  width: 10%;
 }
 
-.price {
+.pricechange {
   color: white;
 }
 
-.price.positive {
+.pricechange.positive {
   color: green;
 }
 
-.price.negative {
+.pricechange.negative {
   color: red;
 }
