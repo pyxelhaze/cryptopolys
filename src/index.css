@@ -37,6 +37,11 @@ h2 {
 .pricechange {
   width: 20%;
 }
+.coinbox a {
+  width: 10%;
+  color: white;
+  text-decoration: none;
+}
 .rank,
 .symbol {
   width: 10%;

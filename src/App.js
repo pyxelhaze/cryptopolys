@@ -3,6 +3,7 @@ import Header from './Header';
 import Main from './Main';
 import './index.css';
 import Footer from './Footer';
+import Coindetails from './Coindetails';
 
 
 
@@ -16,6 +17,9 @@ function App() {
           <Routes>
             <Route path="/"
               element={<Main />}>
+            </Route>
+            <Route path="/coindetails/:id"
+              element={<Coindetails />}>
             </Route>
           </Routes>
         </div>
