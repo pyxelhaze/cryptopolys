@@ -16,16 +16,17 @@ const Register = () => {
             body: JSON.stringify(user),
         });
 
+
         if (response.ok) {
-            console.log('User registered successfully');
+            alert('User registered successfully')
         } else {
-            console.log('Registration failed');
+            alert('Registration failed');
         }
     };
 
     return (
         <form onSubmit={handleSubmit}>
-            <div>
+            <div className="username">
                 <label>Username:</label>
                 <input
                     type="text"
@@ -34,8 +35,8 @@ const Register = () => {
                     required
                 />
             </div>
-            <div>
-                <label>Password (optional):</label>
+            <div className="password">
+                <label>Password:</label>
                 <input
                     type="password"
                     value={password}
@@ -45,7 +46,5 @@ const Register = () => {
             <button type="submit">Register</button>
         </form>
     );
-
 }
-
 export default Register;

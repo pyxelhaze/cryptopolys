@@ -2,9 +2,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import Main from './Main';
 import './index.css';
-import Footer from './Footer';
+/* import Footer from './Footer'; */
 import Coindetails from './Coindetails';
 import Register from './Register';
+import Login from './Login';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
             </Route>
             <Route path="/register"
               element={<Register />}>
+            </Route>
+            <Route path="/login"
+              element={<Login />}>
             </Route>
             {/*  <Route path="/login"
               element={<Login />}>

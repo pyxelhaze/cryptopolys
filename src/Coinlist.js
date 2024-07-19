@@ -12,9 +12,10 @@ const Coinlist = () => {
             {coins && coins.length > 0 ? (
                 coins.map(coin => (
                     <div key={coin.id} className="coinbox">
+                        <button className="material-symbols-outlined"></button>
                         <div className="rank">{coin.market_cap_rank}</div>
                         <Link to={`/coindetails/${coin.id}`}>
-                            <div className="symbol">{coin.symbol}</div>
+                            <div className="symbol">{coin.symbol.toUpperCase()}</div>
                         </Link>
                         <div className={`pricechange ${getChangeClass(coin.price_change_percentage_24h)}`}>
                             {coin.price_change_percentage_24h.toFixed(2)}%
