@@ -4,9 +4,7 @@ import Main from './Main';
 import './index.css';
 import Footer from './Footer';
 import Coindetails from './Coindetails';
-
-
-
+import Register from './Register';
 
 function App() {
   return (
@@ -21,13 +19,19 @@ function App() {
             <Route path="/coindetails/:id"
               element={<Coindetails />}>
             </Route>
+            <Route path="/register"
+              element={<Register />}>
+            </Route>
+            {/*  <Route path="/login"
+              element={<Login />}>
+            </Route> */}
           </Routes>
         </div>
 
       </div>
-      <div className="footer">
+      {/* <div className="footer">
         <Footer />
-      </div>
+      </div> */}
     </Router >
 
 

@@ -1,4 +1,4 @@
-'use strict'
+
 
 export const formatMarketCap = (num) => {
     if (num >= 1.0e+9) {

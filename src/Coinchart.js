@@ -23,9 +23,6 @@ const Coinchart = () => {
         }],
     };
 
-
-
-
     return (<Line data={chartData} />);
 }
 
