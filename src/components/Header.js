@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Link } from "react-router-dom";
-import { UserContext } from "./UserContext";
+import { UserContext } from "../context/UserContext";
 
 const Header = () => {
     const { user, setUser } = useContext(UserContext);
@@ -20,7 +20,7 @@ const Header = () => {
                         <Link to="/">Home</Link>
                         <span className="greeting">Hello, {user.username}</span>
                         <Link to="/favorites">Your cryptos</Link>
-                        <button className="logout" onClick={handleLogout}>Logout</button>
+                        <Link to="/" onClick={handleLogout}>Logout</Link>
                     </>
                 ) : (
                     <>

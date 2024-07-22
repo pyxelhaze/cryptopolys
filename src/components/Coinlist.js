@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import useFetch from "./useFetch";
-import { formatMarketCap } from "./utilities";
-import { getChangeClass } from "./utilities";
+import { formatMarketCap } from "../utilities";
+import { getChangeClass } from "../utilities";
 
 const Coinlist = () => {
     const { data: coins, error, isLoading } = useFetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&per_page=100&page=1');

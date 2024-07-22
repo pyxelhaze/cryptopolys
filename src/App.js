@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { UserProvider } from './UserContext';
-import Header from './Header';
-import Main from './Main';
+import { UserProvider } from './context/UserContext';
+import Header from './components/Header';
+import Main from './components/Main';
 import './index.css';
 /* import Footer from './Footer'; */
-import Coindetails from './Coindetails';
-import Register from './Register';
-import Login from './Login';
+import Coindetails from './components/Coindetails';
+import Register from './components/auth/Register';
+import Login from './components/auth/Login';
 
 
 

@@ -19,7 +19,7 @@ const Register = () => {
         });
 
         if (response.ok) {
-            setMessage('User registered successfully');
+            setMessage('Registration successfull');
         } else {
             setMessage('Registration failed');
         }

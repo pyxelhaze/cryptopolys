@@ -25,9 +25,28 @@ h1 {
   color: rgb(0, 61, 175);
 }
 .greeting {
+  margin-right: 5%;
   color: aliceblue;
   width: 30%;
-  padding-right: 15%;
+}
+.logout {
+  background-color: rgba(240, 248, 255, 0);
+  border: none;
+  color: aliceblue;
+}
+.message-box {
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+}
+.message-box button {
+  margin-left: 5%;
+  width: 20%;
+  border-radius: 5px;
+  border: 1px solid cornflowerblue;
+  background-color: aliceblue;
+  color: cornflowerblue;
 }
 .main-content {
   padding: 0 3% 0 3%;
