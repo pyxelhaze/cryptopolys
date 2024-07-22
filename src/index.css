@@ -24,6 +24,11 @@ h1 {
 .links a:hover {
   color: rgb(0, 61, 175);
 }
+.greeting {
+  color: aliceblue;
+  width: 30%;
+  padding-right: 15%;
+}
 .main-content {
   padding: 0 3% 0 3%;
 }
@@ -32,10 +37,38 @@ h2 {
   padding-bottom: 2%;
   color: rgb(100, 148, 237);
 }
+.coinlistheader {
+  font-size: 0.9em;
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid rgba(100, 148, 237, 0.61);
+  padding-bottom: 3%;
+  text-align: center;
+}
+.headerrank {
+  width: 10%;
+}
+.headercoin {
+  width: 18%;
+}
+.headerpricechange {
+  width: 17%;
+  text-align: right;
+}
+.headerprice {
+  width: 25%;
+  text-align: right;
+}
+.headermarketcap {
+  width: 30%;
+  text-align: right;
+}
+
 .coinlist {
   width: 100%;
 }
-
 .symbol {
   color: black;
 }
@@ -53,21 +86,18 @@ h2 {
 .coinbox:hover {
   background-color: aliceblue;
 }
-.coinbox > div {
-  /*  padding-right: 7%; */
-  display: flex;
-  justify-content: space-around;
-}
+
 .price,
 .marketcap {
+  text-align: right;
   width: 25%;
 }
-
 .pricechange {
-  width: 25%;
+  width: 15%;
+  text-align: center;
 }
 .coinbox a {
-  width: 15%;
+  width: 20%;
   text-decoration: none;
 }
 .pricechange {

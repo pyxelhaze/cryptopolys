@@ -71,13 +71,15 @@ app.post('/api/login', async (req, res) => {
             return res.status(400).json({ message: 'Invalid password' });
         }
 
+
         await connection.end();
-        res.status(200).json({ message: 'Login successful' });
+        res.status(200).json({ username: user.username });
     } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Server error' });
     }
 });
+
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

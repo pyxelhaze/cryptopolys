@@ -1,10 +1,16 @@
-import useFetch from "./useFetch";
+
 import Coinlist from './Coinlist';
 
 const Main = () => {
     return (
         <div className="main-content">
-            <h2>Coins</h2>
+            <div className="coinlistheader">
+                <div className="headerrank">Rank</div>
+                <div className="headercoin">Coin</div>
+                <div className="headerpricechange">24h</div>
+                <div className="headerprice">Price €</div>
+                <div className="headermarketcap">MarketCap €</div>
+            </div>
             <Coinlist />
         </div>
     );

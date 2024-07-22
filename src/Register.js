@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [message, setMessage] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -16,16 +18,27 @@ const Register = () => {
             body: JSON.stringify(user),
         });
 
-
         if (response.ok) {
-            alert('User registered successfully')
+            setMessage('User registered successfully');
         } else {
-            alert('Registration failed');
+            setMessage('Registration failed');
         }
     };
+    const handleMessage = () => {
+        setMessage('');
+        navigate('/login');
+    };
 
-    return (
-        <form onSubmit={handleSubmit}>
+    return (<div className="form">
+        {message && (
+            <div className="message-box">
+                <p>{message}</p>
+                <button onClick={handleMessage}>OK</button>
+            </div>
+        )}
+
+        {!message && (<form onSubmit={handleSubmit}>
+            <h2>Register</h2>
             <div className="username">
                 <label>Username:</label>
                 <input
@@ -44,7 +57,8 @@ const Register = () => {
                 />
             </div>
             <button type="submit">Register</button>
-        </form>
+        </form>)}
+    </div >
     );
 }
 export default Register;

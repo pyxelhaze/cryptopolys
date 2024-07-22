@@ -18,7 +18,7 @@ const Coinlist = () => {
                             <div className="symbol">{coin.symbol.toUpperCase()}</div>
                         </Link>
                         <div className={`pricechange ${getChangeClass(coin.price_change_percentage_24h)}`}>
-                            {coin.price_change_percentage_24h.toFixed(2)}%
+                            {coin.price_change_percentage_24h.toFixed(1)}%
                         </div>
                         {/* <div className="coin">{coin.name}</div> */}
                         <div className="price">€{coin.current_price}</div>
