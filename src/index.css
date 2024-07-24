@@ -1,8 +1,16 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-body {
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+body,
+html {
+  height: 100%;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   font-family: Arial, Helvetica, sans-serif;
@@ -10,30 +18,43 @@ body {
 h1 {
   margin-bottom: 4%;
   color: white;
+  font-family: 'Space Mono', monospace;
 }
 .navbar {
   padding: 5%;
-  margin-bottom: 5%;
   background-color: cornflowerblue;
+  font-family: 'Space-Mono', monospace;
+  font-weight: 400;
+  font-style: normal;
 }
-.links a {
-  margin-right: 5%;
+.links {
+  padding-top: 5%;
+  font-family: 'Space Mono', monospace;
+}
+.links a,
+.linksafter a {
+  padding-right: 15%;
   text-decoration: none;
   color: aliceblue;
 }
 .links a:hover {
   color: rgb(0, 61, 175);
 }
+.loginlinks {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.linksafter {
+  width: 60%;
+}
 .greeting {
-  margin-right: 5%;
-  color: aliceblue;
-  width: 30%;
+  font-weight: 600;
+  margin-bottom: 3%;
+  color: white;
+  padding-right: 10%;
 }
-.logout {
-  background-color: rgba(240, 248, 255, 0);
-  border: none;
-  color: aliceblue;
-}
+
 .message-box {
   padding: 3%;
   display: flex;
@@ -49,7 +70,9 @@ h1 {
   color: cornflowerblue;
 }
 .main-content {
+  margin-top: 3%;
   padding: 0 3% 0 3%;
+  flex: 1;
 }
 h2 {
   font-size: 1.3em;
@@ -66,31 +89,11 @@ h2 {
   padding-bottom: 3%;
   text-align: center;
 }
-.headerrank {
-  width: 10%;
-}
-.headercoin {
-  width: 18%;
-}
-.headerpricechange {
-  width: 17%;
-  text-align: right;
-}
-.headerprice {
-  width: 25%;
-  text-align: right;
-}
-.headermarketcap {
-  width: 30%;
-  text-align: right;
-}
 
 .coinlist {
   width: 100%;
 }
-.symbol {
-  color: black;
-}
+
 .symbol:hover {
   color: cornflowerblue;
 }
@@ -105,22 +108,39 @@ h2 {
 .coinbox:hover {
   background-color: aliceblue;
 }
-
-.price,
-.marketcap {
-  text-align: right;
-  width: 25%;
+.rank {
+  width: 10%;
+  color: cornflowerblue;
+  text-align: left;
 }
-.pricechange {
+.symbol {
   width: 15%;
-  text-align: center;
+  color: black;
+  text-align: left;
 }
 .coinbox a {
-  width: 20%;
+  width: 15%;
   text-decoration: none;
 }
+.price {
+  text-align: right;
+  width: 20%;
+}
+.marketcap {
+  text-align: right;
+  width: 30%;
+}
+.change {
+  width: 25%;
+  text-align: center;
+}
 .pricechange {
-  color: white;
+  width: 25%;
+  text-align: center;
+}
+
+.pricechange {
+  color: rgb(0, 0, 0);
 }
 
 .pricechange.positive {
@@ -131,14 +151,36 @@ h2 {
   color: red;
 }
 
-.rank {
-  width: 10%;
-  color: cornflowerblue;
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Space Mono', monospace;
+  padding: 5%;
+  background-color: cornflowerblue;
 }
+.footer a {
+  color: aliceblue;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: rgb(0, 61, 175);
+}
+
+/* pricechart */
+.price-chart {
+  padding: 1%;
+}
+.coinname {
+  font-weight: bold;
+  padding-bottom: 3%;
+}
+
 /* register/login */
 form {
   display: flex;
   flex-direction: column;
+  font-family: 'Space Mono', monospace;
 }
 .username,
 .password {
@@ -154,11 +196,82 @@ form {
 form input {
   border-radius: 5px;
   border: 1px solid cornflowerblue;
+  font-family: 'Space Mono', monospace;
 }
 form button {
+  font-family: 'Space Mono', monospace;
   width: 25%;
   border-radius: 5px;
   border: 1px solid cornflowerblue;
   background-color: aliceblue;
   color: cornflowerblue;
+}
+.message-box {
+  font-family: 'Space Mono', monospace;
+}
+
+@media (min-width: 480px) {
+  .navbar {
+    padding-bottom: 2%;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+  .links {
+    padding-top: 2%;
+    font-size: 1.3em;
+  }
+  .coinlistheader {
+    font-size: 1.1em;
+  }
+  .footer {
+    padding: 4%;
+  }
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2em;
+    margin-bottom: 1%;
+  }
+  .navbar {
+    padding-bottom: 1%;
+  }
+  .main-content {
+    font-size: 1.1em;
+  }
+  .footer {
+    padding: 2%;
+  }
+}
+@media (min-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  .navbar {
+    width: 100%;
+    padding: 1% 3% 0 3%;
+    box-sizing: border-box;
+  }
+  .navbar-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .main-content {
+    width: 80%;
+    padding-bottom: 2%;
+  }
+  .price-chart {
+    width: 70%;
+  }
+  .app {
+    display: flex;
+    align-items: center;
+  }
+  .footer {
+    padding: 1%;
+    width: 100%;
+  }
 }

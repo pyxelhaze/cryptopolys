@@ -1,19 +1,29 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { UserProvider } from './context/UserContext';
+import { UserContext } from './context/UserContext';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
+import Footer from './components/Footer';
 import './index.css';
-/* import Footer from './Footer'; */
 import Coindetails from './components/Coindetails';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
-
+import Favorites from './components/Favorites';
 
 
 function App() {
 
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem('user');
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
   return (
-    <UserProvider>
+    <UserContext.Provider value={{ user, setUser }}>
       < Router >
         <div className="app">
           <Header />
@@ -31,18 +41,16 @@ function App() {
               <Route path="/login"
                 element={<Login />}>
               </Route>
-              {/*  <Route path="/logout"
-              element={<Logout />}>
-            </Route> */}
+              <Route path="/favorites"
+                element={<Favorites />}>
+              </Route>
             </Routes>
           </div>
-
+          <Footer />
         </div>
-        {/* <div className="footer">
-        <Footer />
-      </div> */}
+
       </Router >
-    </UserProvider>
+    </UserContext.Provider>
 
   );
 }

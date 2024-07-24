@@ -19,11 +19,44 @@ const Coinchart = () => {
             borderColor: 'rgba(75, 192, 192, 1)',
             backgroundColor: 'rgba(75, 192, 192, 0.2)',
             fill: true,
-            pointRadius: 0,
+            pointRadius: window.innerWidth < 768 ? 0 : 5,
         }],
     };
 
-    return (<Line data={chartData} />);
+    const options = {
+        scales: {
+            x: {
+                grid: {
+                    display: true,
+                },
+                ticks: {
+                    color: 'black',
+                },
+            },
+            y: {
+                grid: {
+                    color: 'rgba(75, 192, 192, 0.2)',
+                },
+                ticks: {
+                    color: 'black',
+                },
+            },
+        },
+        plugins: {
+            legend: {
+                labels: {
+                    color: 'rgba(75, 192, 192, 1)',
+                },
+            },
+            tooltip: {
+                backgroundColor: 'rgba(75, 192, 192, 0.8)',
+                titleColor: '#fff',
+                bodyColor: '#fff',
+            },
+        },
+    };
+
+    return <Line data={chartData} options={options} />;
 }
 
 export default Coinchart;

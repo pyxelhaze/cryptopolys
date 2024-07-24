@@ -24,6 +24,7 @@ const Login = () => {
         if (response.ok) {
             const data = await response.json();
             setUser(data);
+            localStorage.setItem('user', JSON.stringify(data));
             setMessage('Login successful');
         } else {
             setMessage('Login failed');

@@ -3,13 +3,13 @@ import Coinlist from './Coinlist';
 
 const Main = () => {
     return (
-        <div className="main-content">
+        <div className="main">
             <div className="coinlistheader">
-                <div className="headerrank">Rank</div>
-                <div className="headercoin">Coin</div>
-                <div className="headerpricechange">24h</div>
-                <div className="headerprice">Price €</div>
-                <div className="headermarketcap">MarketCap €</div>
+                <div className="rank">No</div>
+                <div className="symbol">Coin</div>
+                <div className="change">24h</div>
+                <div className="price">Price €</div>
+                <div className="marketcap">MarketCap €</div>
             </div>
             <Coinlist />
         </div>
