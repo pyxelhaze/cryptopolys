@@ -22,7 +22,7 @@ const Coinlist = () => {
                         <div className={`pricechange ${getChangeClass(coin.price_change_percentage_24h)}`}>
                             {coin.price_change_percentage_24h.toFixed(1)}%
                         </div>
-                        <div className="price">€{coin.current_price}</div>
+                        <div className="price">{coin.current_price}</div>
                         <div className="marketcap">{formatMarketCap(coin.market_cap)}</div>
 
                     </div>

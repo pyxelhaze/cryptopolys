@@ -16,7 +16,7 @@ const Header = () => {
 
         <nav className="navbar">
             <div className="navbar-content">
-                <h1>Cryptopolys</h1>
+                <p>Cryptopolys</p>
                 <div className="links">
                     {user ? (
                         <> <div className="loginlinks">

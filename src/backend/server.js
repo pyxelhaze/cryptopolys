@@ -3,7 +3,11 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const app = express();
-const port = 5000;
+const port = 3306;
+
+app.get('/', (req, res) => {
+    res.send('Server is running!');
+});
 
 
 const authRoutes = require('./auth-routes');

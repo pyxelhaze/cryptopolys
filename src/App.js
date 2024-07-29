@@ -27,6 +27,7 @@ function App() {
       < Router >
         <div className="app">
           <Header />
+          <div className="line"></div>
           <div className="main-content">
             <Routes>
               <Route path="/"
@@ -46,6 +47,7 @@ function App() {
               </Route>
             </Routes>
           </div>
+          <div className="line"></div>
           <Footer />
         </div>
 

@@ -1,4 +1,5 @@
 * {
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,25 +12,35 @@
 body,
 html {
   height: 100%;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
   margin-bottom: 4%;
   color: white;
-  font-family: 'Space Mono', monospace;
 }
 .navbar {
+  position: relative;
+  padding-bottom: 10px;
   padding: 5% 5% 0% 5%;
-  background-color: cornflowerblue;
-  font-family: 'Space-Mono', monospace;
+  background-color: rgb(0, 0, 0);
   font-weight: 400;
   font-style: normal;
+  /* border-bottom: 1px solid white; */
+}
+.line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.075) 1%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0.075) 99%
+  );
 }
 .links {
   padding-top: 5%;
-  font-family: 'Space Mono', monospace;
 }
 .links,
 .linksafter {
@@ -42,7 +53,7 @@ h1 {
   color: aliceblue;
 }
 .links a:hover {
-  color: rgb(0, 61, 175);
+  font-weight: 400;
 }
 .loginlinks {
   display: flex;
@@ -72,6 +83,7 @@ h1 {
   background-color: aliceblue;
   color: cornflowerblue;
 }
+
 .main-content {
   margin-top: 3%;
   padding: 0 3% 0 3%;
@@ -88,7 +100,8 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: row;
-  border-bottom: 2px solid rgba(100, 148, 237, 0.61);
+  justify-content: center;
+  border-bottom: 1px solid rgb(255, 255, 255);
   padding-bottom: 2%;
   text-align: center;
 }
@@ -98,44 +111,55 @@ h2 {
 }
 
 .symbol:hover {
-  color: cornflowerblue;
+  font-weight: 400;
 }
 .coinbox {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   max-width: 100%;
   height: 40px;
-  border-bottom: 1px solid cornflowerblue;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.61);
+  transition: height 0.3s ease;
 }
 .coinbox:hover {
-  background-color: aliceblue;
+  height: 45px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 .rank {
-  width: 10%;
-  color: cornflowerblue;
+  width: 8%;
+  color: rgb(255, 255, 255);
   text-align: left;
+  font-weight: 300;
 }
+.coin,
 .symbol {
   width: 15%;
-  color: black;
+  color: rgb(255, 254, 254);
   text-align: left;
+  font-weight: 100;
 }
 .coinbox a {
   width: 15%;
   text-decoration: none;
+  font-weight: 500;
 }
 .price {
   text-align: right;
   width: 20%;
+  font-weight: 100;
 }
 .marketcap {
   text-align: right;
-  width: 30%;
+  width: 25%;
+  font-weight: 100;
 }
 .change {
   width: 25%;
   text-align: center;
+  font-weight: 100;
 }
 .pricechange {
   width: 25%;
@@ -147,27 +171,30 @@ h2 {
 }
 
 .pricechange.positive {
-  color: rgb(0, 180, 0);
+  color: #00ff29;
+  font-weight: 200;
 }
 
 .pricechange.negative {
   color: red;
+  font-weight: 300;
 }
 
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   padding: 5%;
-  background-color: cornflowerblue;
+  background-color: rgb(0, 0, 0);
+  /* border-top: 1px solid white; */
 }
 .footer a {
   color: aliceblue;
   text-decoration: none;
 }
-.footer a:hover {
-  color: rgb(0, 61, 175);
+h4:hover {
+  font-weight: 500;
 }
 
 /* pricechart */
@@ -183,7 +210,7 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
 }
 .username,
 .password {
@@ -199,18 +226,21 @@ form {
 form input {
   border-radius: 5px;
   border: 1px solid cornflowerblue;
-  font-family: 'Space Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
 }
 form button {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
   width: 25%;
   border-radius: 5px;
   border: 1px solid cornflowerblue;
   background-color: aliceblue;
   color: cornflowerblue;
 }
+form button:hover {
+  cursor: pointer;
+}
 .message-box {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (min-width: 480px) {
@@ -220,6 +250,7 @@ form button {
   .links {
     padding-top: 2%;
     font-size: 1.3em;
+    font-weight: 100;
   }
   .coinlistheader {
     font-size: 1.1em;
@@ -232,9 +263,10 @@ form button {
   .navbar {
     padding: 2% 3% 0 3%;
   }
-  h1 {
+  .navbar-content p {
     font-size: 2em;
     margin-bottom: 1%;
+    font-weight: lighter;
   }
   .links {
     padding-bottom: 0%;
@@ -276,6 +308,7 @@ form button {
     width: 80%;
     padding-bottom: 2%;
   }
+
   .price-chart {
     width: 70%;
   }
@@ -283,6 +316,9 @@ form button {
   .app {
     display: flex;
     align-items: center;
+  }
+  h4 {
+    font-weight: 200;
   }
   .footer {
     padding: 1%;

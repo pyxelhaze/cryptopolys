@@ -3,11 +3,13 @@ const bcrypt = require('bcrypt');
 const mysql = require('mysql2/promise');
 const router = express.Router();
 
+require('dotenv').config();
+
 const dbConfig = {
-    host: 'localhost',
-    user: 'root',
-    password: 'zander',
-    database: 'cryptoapp'
+    host: process.env.host,
+    user: process.env.user,
+    password: process.env.password,
+    database: process.env.database
 };
 
 router.post('/register', async (req, res) => {
