@@ -12,7 +12,7 @@ const Main = () => {
                 <div className="coin">Coin</div>
                 <div className="change">24h</div>
                 <div className="price">Price €</div>
-                <div className="marketcap">MarketCap €</div>
+                <div className="marketcap">MarketCap </div>
 
             </div>
             <Coinlist />

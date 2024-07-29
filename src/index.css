@@ -16,9 +16,12 @@ html {
   color: rgb(255, 255, 255);
   font-family: Arial, Helvetica, sans-serif;
 }
-h1 {
+.navbar p {
+  padding-top: 2%;
   margin-bottom: 4%;
   color: white;
+  font-size: 1.9em;
+  font-weight: 150;
 }
 .navbar {
   position: relative;
@@ -29,16 +32,7 @@ h1 {
   font-style: normal;
   /* border-bottom: 1px solid white; */
 }
-.line {
-  height: 1px;
-  width: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.075) 1%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 255, 255, 0.075) 99%
-  );
-}
+
 .links {
   padding-top: 5%;
 }
@@ -51,43 +45,44 @@ h1 {
   padding-right: 15%;
   text-decoration: none;
   color: aliceblue;
+  font-weight: 150;
+  font-size: 1.1em;
 }
 .links a:hover {
   font-weight: 400;
 }
+
 .loginlinks {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 .linksafter {
-  width: 60%;
+  width: 40%;
 }
 .greeting {
-  font-weight: 600;
+  width: auto;
+  font-weight: 400;
   color: white;
   padding-right: 10%;
+  font-size: 1.1em;
 }
-
-.message-box {
-  padding: 3%;
-  display: flex;
-  flex-direction: row;
-  width: 75%;
-}
-.message-box button {
-  margin-left: 5%;
-  width: 20%;
-  border-radius: 5px;
-  border: 1px solid cornflowerblue;
-  background-color: aliceblue;
-  color: cornflowerblue;
+.line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.075) 1%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0.075) 99%
+  );
 }
 
 .main-content {
-  margin-top: 3%;
+  margin-top: 10%;
   padding: 0 3% 0 3%;
   flex: 1;
+  margin-bottom: 5%;
 }
 h2 {
   font-size: 1.3em;
@@ -101,7 +96,7 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border-bottom: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.63);
   padding-bottom: 2%;
   text-align: center;
 }
@@ -129,7 +124,7 @@ h2 {
   border-bottom: 1px solid rgb(255, 255, 255);
 }
 .rank {
-  width: 8%;
+  width: 10%;
   color: rgb(255, 255, 255);
   text-align: left;
   font-weight: 300;
@@ -148,7 +143,7 @@ h2 {
 }
 .price {
   text-align: right;
-  width: 20%;
+  width: 17%;
   font-weight: 100;
 }
 .marketcap {
@@ -190,8 +185,11 @@ h2 {
   /* border-top: 1px solid white; */
 }
 .footer a {
-  color: aliceblue;
+  color: hwb(0 100% 0%);
   text-decoration: none;
+}
+h4 {
+  font-weight: 200;
 }
 h4:hover {
   font-weight: 500;
@@ -204,43 +202,87 @@ h4:hover {
 .coinname {
   font-weight: bold;
   padding-bottom: 3%;
+  font-weight: 400;
+}
+.current-price {
+  font-weight: 200;
+}
+.chart-container {
+  margin-top: 5%;
 }
 
 /* register/login */
 form {
   display: flex;
   flex-direction: column;
+  padding-left: 3%;
   font-family: 'Montserrat', sans-serif;
+}
+form h2 {
+  color: white;
+  font-weight: 300;
+  font-size: 1.4em;
+  margin-bottom: 3%;
 }
 .username,
 .password {
+  display: flex;
   width: 100%;
+  flex-direction: row;
   margin-bottom: 2%;
+  font-size: 1.1em;
 }
 .username label,
 .password label {
-  width: 50%;
-  margin-right: 4%;
+  width: 30%;
 }
 
 form input {
+  width: 45%;
   border-radius: 5px;
-  border: 1px solid cornflowerblue;
+  border: 1px solid rgb(0, 0, 0);
   font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 0 1% 0 1%;
 }
 form button {
+  margin-top: 3%;
   font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  padding: 2%;
   width: 25%;
   border-radius: 5px;
-  border: 1px solid cornflowerblue;
-  background-color: aliceblue;
-  color: cornflowerblue;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 form button:hover {
+  border: 2px solid rgb(255, 255, 255);
+  font-weight: 600;
   cursor: pointer;
 }
 .message-box {
-  font-family: 'Montserrat', sans-serif;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.message-box p {
+  font-size: 1.5em;
+}
+.message-box button {
+  margin-top: 10%;
+  width: 20%;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 2%;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 @media (min-width: 480px) {
@@ -258,10 +300,22 @@ form button:hover {
   .footer {
     padding: 4%;
   }
+  .username label,
+  .password label {
+    width: 30%;
+  }
+
+  form input {
+    width: 40%;
+  }
+  .username,
+  .password {
+    font-size: 1.4em;
+  }
 }
 @media (min-width: 768px) {
   .navbar {
-    padding: 2% 3% 0 3%;
+    padding: 2% 10% 0 10%;
   }
   .navbar-content p {
     font-size: 2em;
@@ -273,6 +327,8 @@ form button:hover {
   }
   .main-content {
     font-size: 1.1em;
+    padding: 0% 10% 0 10%;
+    margin-top: 4%;
   }
   .coinlistheader {
     padding-bottom: 1%;
@@ -300,13 +356,20 @@ form button:hover {
     width: 80%;
     margin: 0 auto;
   }
+  .navbar p {
+    font-size: 2em;
+    font-weight: 100;
+    margin-bottom: 2%;
+  }
   .links,
   .linksafter {
     padding-bottom: 0%;
   }
+
   .main-content {
     width: 80%;
-    padding-bottom: 2%;
+    margin-bottom: 2%;
+    padding: 0% 3% 0% 3%;
   }
 
   .price-chart {
@@ -323,5 +386,69 @@ form button:hover {
   .footer {
     padding: 1%;
     width: 100%;
+  }
+
+  /* register/login */
+  form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3%;
+    font-family: 'Montserrat', sans-serif;
+  }
+  form h2 {
+    color: white;
+    font-weight: 300;
+    font-size: 1.4em;
+    margin-bottom: 3%;
+  }
+  .username,
+  .password {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin-bottom: 2%;
+  }
+  .username label,
+  .password label {
+    width: 15%;
+    font-size: 0.9em;
+  }
+  /* form */
+
+  form input {
+    width: 20%;
+    font-size: 0.8em;
+  }
+  form button {
+    font-weight: 400;
+    font-size: 1em;
+    padding: 1%;
+    width: 10%;
+  }
+  form button:hover {
+    border: 2px solid rgb(255, 255, 255);
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .message-box {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .message-box p {
+    font-size: 1.5em;
+  }
+  .message-box button {
+    margin-top: 10%;
+    width: 20%;
+    border-radius: 5px;
+    font-size: 1em;
+    padding: 2%;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   }
 }

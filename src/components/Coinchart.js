@@ -16,47 +16,60 @@ const Coinchart = () => {
         datasets: [{
             label: 'Price (EUR)',
             data: coins.prices.map(price => price[1]),
-            borderColor: 'rgba(75, 192, 192, 1)',
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(255,255,255, 1)',
+            backgroundColor: 'rgba(255,255,255, 0.2)',
             fill: true,
-            pointRadius: window.innerWidth < 768 ? 0 : 5,
+            pointRadius: window.innerWidth < 768 ? 0 : 3,
         }],
     };
 
     const options = {
+        layout: {
+            padding: {
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 0
+            }
+        },
         scales: {
             x: {
                 grid: {
                     display: true,
                 },
                 ticks: {
-                    color: 'black',
+                    color: 'white',
                 },
             },
             y: {
                 grid: {
-                    color: 'rgba(75, 192, 192, 0.2)',
+                    color: 'white',
                 },
                 ticks: {
-                    color: 'black',
+                    color: 'white',
                 },
             },
         },
         plugins: {
             legend: {
                 labels: {
-                    color: 'rgba(75, 192, 192, 1)',
+                    color: 'rgba(255,255,255, 1)',
                 },
             },
             tooltip: {
-                backgroundColor: 'rgba(75, 192, 192, 0.8)',
+                backgroundColor: 'rgba(black, 0.8)',
                 titleColor: '#fff',
                 bodyColor: '#fff',
+                borderColor: 'white',
             },
         },
     };
 
-    return <Line data={chartData} options={options} />;
+    return (
+        <div className="chart-container">
+            <Line data={chartData} options={options} />
+        </div>);
+
 }
 
 export default Coinchart;
