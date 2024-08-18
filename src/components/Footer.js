@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div className="footer">
             <div className="footer-content">
-                <Link to="https://pyxelhaze.com/"><h4>pyxelhaze 2024</h4></Link>
+                <Link to="https://pyxelhaze.com/"><h4>back to pyxelhaze.com</h4></Link>
             </div>
         </div>
     );
