@@ -13,7 +13,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const user = { username, password };
-        const response = await fetch('https://cryptopolys-kzlt.onrender.com/api/login', {
+        const response = await fetch('https://cryptopolys-ss7j.onrender.com/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

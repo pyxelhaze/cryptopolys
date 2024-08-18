@@ -10,7 +10,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const user = { username, password };
-        const response = await fetch('https://cryptopolys-kzlt.onrender.com/api/register', {
+        const response = await fetch('https://cryptopolys-ss7j.onrender.com/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
